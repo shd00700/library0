@@ -121,7 +121,7 @@ func ReadRegInJsonMaker(a uint16, b []uint16, leng uint16) interface{} {
 	return jsonmaker
 }
 
-func JsonMaker(bytes []byte) []byte {
+func JsonMaker(bytes []byte) ([]byte, []byte) {
 	sensordater := map[string]interface{}{}
 	result := []map[string]interface{}{}
 
