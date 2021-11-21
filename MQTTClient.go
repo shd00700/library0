@@ -37,4 +37,5 @@ func Listen(uri string, topic string, cb mqtt.MessageHandler) {
 func MQTTPublish(client mqtt.Client, topic string, payload interface{}) {
 
 	client.Publish(topic, 0, true, payload)
+	time.Sleep(time.Second)
 }
